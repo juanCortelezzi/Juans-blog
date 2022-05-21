@@ -1,7 +1,7 @@
 export const Header = () => (
   <header className="navbar rounded-lg shadow-md">
     <div className="flex-1">
-      <button className="btn btn-ghost normal-case text-xl">Template</button>
+      <button className="btn btn-ghost normal-case text-xl">Testing</button>
     </div>
     <div className="flex-none">
       <button className="btn btn-square btn-ghost">

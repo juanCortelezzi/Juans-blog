@@ -5,11 +5,11 @@ import { ThemeChanger } from "@/components/themeSwitch";
 const Home: NextPage = () => {
   return (
     <Layout
-      title="Frontend Template"
+      title="Frontend Testing"
       desc="Simple Frontend template, just Ctrl + c and Ctrl + v"
       className="prose prose-lg prose-h1:my-8 mx-auto"
     >
-      <h1>Next + TS + Tailwind + DaisyUI</h1>
+      <h1>Frontend Testing</h1>
       <h2>Theme changing</h2>
       <ThemeChanger />
       <h2>Decision making</h2>
