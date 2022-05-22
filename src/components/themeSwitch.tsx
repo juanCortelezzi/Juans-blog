@@ -11,7 +11,7 @@ export const ThemeSwitch = () => {
 
   return (
     <>
-      <div className="flex justify-center btn-group">
+      <div className="btn-group flex justify-center">
         <button className="btn btn-primary" onClick={() => setTheme("light")}>
           Light Mode
         </button>

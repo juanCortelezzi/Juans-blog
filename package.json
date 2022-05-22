@@ -8,6 +8,7 @@
     "start": "next start",
     "lint:next": "next lint",
     "lint:types": "tsc --noEmit --pretty",
+    "lint:format": "prettier --check --ignore-path .gitignore \"**/*.{ts,tsx,js}\"",
     "lint:fix": "pnpm lint:types && pnpm lint:next --fix",
     "lint": "pnpm lint:types && pnpm lint:next",
     "precommit": "pnpm lint-staged"
@@ -37,6 +38,8 @@
     "husky": "^8.0.1",
     "lint-staged": "^12.4.1",
     "postcss": "^8.4.14",
+    "prettier": "^2.6.2",
+    "prettier-plugin-tailwindcss": "^0.1.11",
     "reading-time": "^1.5.0",
     "rehype-autolink-headings": "^6.1.1",
     "rehype-code-titles": "^1.0.3",

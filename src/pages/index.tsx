@@ -6,7 +6,7 @@ const Home: NextPage = () => {
     <Layout
       title="JBC"
       desc="The JBC blog landing page"
-      className="w-full prose-sm sm:prose sm:max-w-none"
+      className="prose-sm w-full sm:prose sm:max-w-none"
     >
       <h1>
         Hey, I&apos;m <span className="text-primary">Juan Cortelezzi</span>

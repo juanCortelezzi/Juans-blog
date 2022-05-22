@@ -15,7 +15,7 @@ type ButtonProps = {
 const ButtonLink = ({ text, href, active = false }: ButtonProps) => (
   <Link href={href} passHref>
     <button
-      className={`btn btn-sm btn-ghost normal-case text-xl ${
+      className={`btn btn-ghost btn-sm text-xl normal-case ${
         !active && "font-normal"
       }`}
     >
@@ -34,7 +34,7 @@ export const Header = ({ className }: HeaderProps) => {
 
   return (
     <header className={`navbar mb-10 p-0 ${className && className}`}>
-      <div className="navbar-start space-x-1 ml-[-0.70rem]">
+      <div className="navbar-start ml-[-0.70rem] space-x-1">
         {buttons.map((button) => (
           <ButtonLink
             key={`${button.text}-${button.href}`}
@@ -48,7 +48,7 @@ export const Header = ({ className }: HeaderProps) => {
           rel="noreferrer"
           target="_blank"
         >
-          <button className="btn btn-sm btn-ghost normal-case text-xl font-normal">
+          <button className="btn btn-ghost btn-sm text-xl font-normal normal-case">
             Github
           </button>
         </a>

@@ -21,13 +21,13 @@ export function ThemeMenu({ buttonSize = "btn-sm" }: Props) {
   if (!mounted) return null;
 
   return (
-    <Menu as="div" className="dropdown dropdown-end not-prose">
+    <Menu as="div" className="not-prose dropdown dropdown-end">
       <Menu.Button className={`btn btn-ghost btn-square ${buttonSize}`}>
         <ColorSwatchIcon />
       </Menu.Button>
       <Menu.Items
         as="ul"
-        className="dropdown-content menu p-2 shadow bg-base-300 rounded-box gap-2"
+        className="dropdown-content menu rounded-box gap-2 bg-base-300 p-2 shadow"
       >
         <Menu.Item as="li">
           {({ active }) => (

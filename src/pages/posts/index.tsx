@@ -18,7 +18,7 @@ function PostCard(post: Post) {
   const router = useRouter();
   return (
     <div
-      className="card card-compact card-bordered bg-base-300 shadow-xl not-prose rounded-lg cursor-pointer"
+      className="not-prose card card-bordered card-compact cursor-pointer rounded-lg bg-base-300 shadow-xl"
       onClick={() => router.push(post.url)}
     >
       <figure className="relative h-72">
@@ -30,7 +30,7 @@ function PostCard(post: Post) {
           priority
         />
       </figure>
-      <div className="card-body prose-sm">
+      <div className="prose-sm card-body">
         <h2 className="card-title">{post.title}</h2>
         <time>
           {format(parseISO(post.date), "LLLL d, yyyy")} - {metadata.text} -{" "}
@@ -47,10 +47,10 @@ const PostsPage: NextPage<{ posts: Post[] }> = ({ posts }) => {
     <Layout
       title="JBC - Blog"
       desc="List of all blogs"
-      className="w-full prose-sm sm:prose sm:max-w-none"
+      className="prose-sm w-full sm:prose sm:max-w-none"
     >
       <h1>Blog Posts</h1>
-      <div className="w-full grid grid-cols-1 gap-8">
+      <div className="grid w-full grid-cols-1 gap-8">
         {posts.map((post, idx) => (
           <PostCard key={idx} {...post} />
         ))}
