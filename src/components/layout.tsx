@@ -11,14 +11,14 @@ type Props = {
 
 export const Layout = ({ children, className, title, desc }: Props) => {
   return (
-    <div className="container max-w-4xl mx-auto my-4 min-h-screen flex flex-col space-y-4">
+    <div className="container max-w-2xl mx-auto my-5 min-h-screen flex flex-col">
       <Head>
         <title>{title}</title>
         <meta name="description" content={desc} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
-      <main className={`grow ${className && className}`}>{children}</main>
+      <Header className="px-4" />
+      <main className={`grow px-4 ${className && className}`}>{children}</main>
     </div>
   );
 };
