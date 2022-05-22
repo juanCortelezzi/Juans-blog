@@ -22,6 +22,7 @@
       "@/components/*": ["src/components/*"],
       "@/hooks/*": ["src/hooks/*"],
       "@/styles/*": ["src/styles/*"],
+      "@/types": ["src/types/index.ts"],
       "contentlayer/generated": ["./.contentlayer/generated"]
     }
   },

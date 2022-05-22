@@ -1,0 +1,135 @@
+---
+title: Lorem Ipsum
+description: This is a test post.
+image: /gruvbox-penguin.jpg
+date: 2021-12-24
+---
+
+## Heading 2
+
+### Heading 3
+
+#### Heading 4
+
+This test Post serves the purpose of displaying all the possible components in
+order to improve their styling.
+
+normal text, **bold text**, _italic text_, ~~strikeout text~~
+
+Lorem ipsum `dolor` sit amet, consectetur adipiscing elit. Nam maximus bibendum
+sem in pulvinar. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+Quisque vitae eleifend metus. Nunc et metus eget est malesuada aliquet volutpat
+luctus massa. Nullam feugiat massa sit amet enim vehicula bibendum. Cras sed
+erat tristique sapien semper ultricies. Sed eget mauris purus. Nulla suscipit,
+arcu ac convallis varius, dolor enim laoreet mauris, a viverra risus ex nec
+massa. Morbi commodo at turpis `vitae` placerat. Nunc elementum mi eu urna
+vehicula finibus. Donec tincidunt tincidunt sagittis. Maecenas aliquam porta
+nisl. Phasellus in diam non justo mollis pulvinar viverra id magna. Proin ante
+augue, viverra quis volutpat ut, hendrerit id massa. Mauris porta aliquet odio,
+ut consequat arcu mattis et. In venenatis mi at commodo semper.
+
+Nulla imperdiet imperdiet metus ac feugiat. Integer quis velit accumsan,
+interdum ante id, consectetur felis. Sed blandit aliquet imperdiet. Aliquam
+lobortis metus leo, in tincidunt lectus interdum in. Cras iaculis, ex id
+fermentum facilisis, ipsum nibh sodales enim, ut tempus turpis dolor a purus.
+Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
+curae; Nulla facilisi. Praesent non ultrices sapien, varius consequat dolor.
+Maecenas eu varius nibh. In purus neque, viverra nec ligula consequat, luctus
+aliquam justo.
+
+Integer a nulla leo. Integer scelerisque ex at ultricies blandit. Etiam vel ante
+a risus dictum ultrices quis sed ligula. Mauris nec elit sodales, dapibus lorem
+ut, iaculis arcu. Proin eget elit nec augue auctor fermentum id convallis enim.
+Praesent pellentesque tristique facilisis. Maecenas aliquet ipsum et condimentum
+lacinia. Nam tincidunt tellus elit, non facilisis augue imperdiet vel. Maecenas
+pulvinar elit non lacus lacinia mattis. Phasellus eget gravida tellus. Curabitur
+in ante quis erat cursus vehicula sit amet sed nulla. Praesent aliquet faucibus
+dui, a volutpat magna scelerisque vel. Quisque vehicula blandit massa, in
+vehicula enim lacinia non. Proin volutpat fringilla eros, ac cursus leo
+venenatis non.
+
+Sed commodo mi non ex scelerisque faucibus. Curabitur consequat, leo eget
+ullamcorper aliquet, est tellus efficitur metus, et mattis urna lorem ac nibh.
+In quis erat tincidunt, tempus sapien quis, dignissim diam. Nulla ornare massa a
+purus mattis blandit. Sed vestibulum enim a sapien scelerisque, ac ultricies
+purus malesuada. Morbi in odio imperdiet nibh consectetur vestibulum id a erat.
+In hac habitasse platea dictumst. Aenean iaculis lacus non tincidunt ultrices.
+Cras molestie magna non nulla ultricies, at ullamcorper dolor tempus. Donec
+porta nulla vel accumsan volutpat. Vestibulum ante ipsum primis in faucibus orci
+luctus et ultrices posuere cubilia curae;
+
+Donec dignissim semper mi, mattis consequat ipsum pharetra et. Phasellus nisi
+lorem, viverra nec magna nec, luctus egestas massa. Aliquam convallis placerat
+massa. Nulla vehicula tortor non efficitur aliquam. Aliquam sollicitudin elit eu
+nibh fringilla dignissim. Sed maximus faucibus metus, rutrum consectetur sapien
+scelerisque eget. Quisque dignissim mi a magna tempus facilisis. Nulla nulla
+ante, euismod nec dui sed, pulvinar vehicula neque. Mauris non lectus quis leo
+ullamcorper semper ut vel enim. Nullam eros ipsum, ullamcorper id scelerisque
+sed, laoreet et dui. Aenean libero eros, sagittis vel dolor non, cursus
+vestibulum lectus. Vivamus dapibus, neque non suscipit mollis, orci augue
+convallis nisl, eu tempor erat nisi in purus. Pellentesque ac metus ut nisi
+euismod molestie.
+
+```typescript
+import { ThemeMenu } from "@/components/themeMenu";
+import Link from "next/link";
+
+type HeaderProps = {
+  className?: string;
+};
+
+export const Header = ({ className }: HeaderProps) => (
+  <header className={`navbar mb-10 p-0 ${className && className}`}>
+    <div className="navbar-start space-x-2 ml-[-0.70rem]">
+      <Button text="Testing" href="/" active />
+      <Button text="Falopa" href="#" />
+      <Button text="Saraza" href="#" />
+    </div>
+    <div className="navbar-end">
+      <ThemeMenu />
+    </div>
+  </header>
+);
+```
+
+---
+
+<Image src="/gruvbox-penguin.jpg" alt="gruvbox-penguin" />
+
+---
+
+- hola
+- hello world
+
+* hola
+* hello world
+* 123 testing
+
+1. hola
+2. this is a blog
+3. we are testing again
+
+- [ ] hola
+- [x] this is my blog
+- [ ] my name is Juan
+
+link to the best search engine [duck duck][2]
+
+---
+
+> solo soy codigo
+
+> multiline quote
+>
+> second line
+
+---
+
+| this is a table | column 1 |
+| --------------- | -------- |
+| row 1           | hello    |
+| row 2           | g'day    |
+
+hello this is a testing paragraph, its just to test the typing speed of the current writer, and the cms page
+
+[2]: https://duckduckgo.com
