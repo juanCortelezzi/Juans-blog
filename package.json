@@ -6,11 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "prepare": "husky install",
     "lint:next": "next lint",
     "lint:types": "tsc --noEmit --pretty",
-    "lint:format": "prettier --check --ignore-path .gitignore \"**/*.{ts,tsx,js}\"",
-    "lint:fix": "pnpm lint:types && pnpm lint:next --fix",
-    "lint": "pnpm lint:types && pnpm lint:next",
+    "lint:format": "prettier --check --config prettier.config.js --ignore-path .gitignore \"**/*.{ts,tsx,js}\"",
+    "lint:fix": "pnpm lint:types && pnpm lint:next --fix && pnpm lint:format --write",
+    "lint": "pnpm lint:types && pnpm lint:next && pnpm lint:format",
     "precommit": "pnpm lint-staged"
   },
   "dependencies": {
