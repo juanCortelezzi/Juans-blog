@@ -18,7 +18,7 @@ export const ThemeSwitch = () => {
         <button className="btn btn-secondary" onClick={() => setTheme("night")}>
           Night Mode
         </button>
-        <button className="btn btn-accent" onClick={() => setTheme("mytheme")}>
+        <button className="btn btn-accent" onClick={() => setTheme("rosepine")}>
           Custom Mode
         </button>
       </div>

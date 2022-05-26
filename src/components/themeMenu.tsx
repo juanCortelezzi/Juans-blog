@@ -5,7 +5,7 @@ import {
   ColorSwatchIcon,
   MoonIcon,
   SunIcon,
-  CogIcon,
+  SparklesIcon,
 } from "@heroicons/react/outline";
 
 type Props = {
@@ -59,9 +59,9 @@ export function ThemeMenu({ buttonSize = "btn-sm" }: Props) {
               className={`btn btn-ghost btn-square ${buttonSize} ${
                 active && "btn-active"
               }`}
-              onClick={() => setTheme("mytheme")}
+              onClick={() => setTheme("rosepine")}
             >
-              <CogIcon />
+              <SparklesIcon />
             </a>
           )}
         </Menu.Item>
