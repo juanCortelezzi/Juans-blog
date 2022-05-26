@@ -1,0 +1,175 @@
+---
+title: Create a Typescript testing sandbox
+description: Create your first typescript testing sandbox!
+image: /typescript.png
+date: 2022-05-25
+---
+
+## What is Typescript?
+
+Typescript (TS) is a superset of Javascript (JS), which means that almost any JS
+code is also TS code, but the inverse is not true.
+
+What is the difference? Well, JS is a dynamically typed language which means
+that you can assign different types to the same variable.
+
+```js
+// Javascript does not care about types.
+
+const value = 19;
+
+value = "hello there";
+
+value = true;
+```
+
+But on the other hand...
+
+```ts
+// Typescript does.
+
+const value = 19;
+
+// Error here, value is of type number and cannot be assigned a string.
+value = "hello there";
+```
+
+This is great because it prevents us from making dumb mistakes by checking them
+at _"compile"_ time. Typescript provides a lot of other handy checks and
+validations to help us when writing code, but the important part is that since
+TS only helps us when developing, when we _"compile"_ our code, any
+TS is now gone and only javascript remains. This is because the browsers cannot
+run TS natively .... yet!
+
+Due to the fact that my explanations are not the best and that english is not my
+first language, I highly encourage you to watch some videos made by people way
+smarter than me:
+
+- [fireship's typescript video](https://www.youtube.com/watch?v=zQnBQ4tB3ZA)
+- [Jack Herrington's every day types video](https://www.youtube.com/watch?v=LKVHFHJsiO0)
+
+## How to get started?
+
+Well, in order to get started you just need to have installed the following
+tools:
+
+- Nodejs
+- Npm, Yarn or Pnpm
+- Some text editor (VSCode, Neovim, Sublime, etc...)
+
+### Creating project
+
+Once you have those installed, you will need a testing directory. Create a new
+folder and name it whatever you want, mine will be called **ts-testing**.
+
+Now we need to initialize a **package.json**, to do so run:
+
+```bash
+# Depending on which node package manager you have chosen, do
+
+npm init
+
+# or
+
+yarn init
+
+# or
+
+pnpm init
+```
+
+### Installing dependencies
+
+Then create a main.ts file, this could be any name, but main or index are
+usually the convention you will want to use.
+
+In order to get started we will need to install a few dependencies which will
+help us to run typescript with the node engine.
+
+```bash
+npm i -D typescript ts-node ts-node-dev @types/node
+
+# or
+
+yarn add -D typescript ts-node ts-node-dev @types/node
+
+# or
+
+pnpm add -D typescript ts-node ts-node-dev @types/node
+```
+
+#### Why?
+
+- typescript: to get typescript support
+- ts-node: to run typescript files in node
+- ts-node-dev: to rerun the ts-node command when the file changes
+- @types/node: to get the nodejs types for typescript
+
+### Results
+
+```json
+// package.json
+{
+  "name": "ts-testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^17.0.35",
+    "ts-node": "^10.8.0",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.7.2"
+  }
+}
+```
+
+The resulting directory structure should be the following one:
+
+```
+node_modules/
+main.ts
+package.json
+pnpm-lock.yaml
+```
+
+> keep in mind that I used pnpm to start this project, if you used a different
+> tool, the **pnpm-lock.yaml** may be **yarn.lock** or **package-lock.json**
+
+## Final steps
+
+Add the following scripts to make the development easier:
+
+```json
+// package.json
+{
+  "name": "ts-testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  // Add this scripts
+  "scripts": {
+    // start will run the file main.ts onece
+    "start": "ts-node main.ts",
+    // dev will re-run the file main.ts every time it is changed
+    "dev": "ts-node-dev --respawn main.ts"
+  }
+  // ... rest of file ...
+}
+```
+
+now running **pnpm dev** or **yarn dev** or **npm run dev** should run the
+main.ts file.
+
+No output? Well, we haven't written anything in the file yet! Add the following
+to test if it is working:
+
+```ts
+console.log("hello world!");
+```
+
+Now it should output **hello world** to the console!! Finally, your typescript
+sandbox is done, you can now start practicing typescript.
