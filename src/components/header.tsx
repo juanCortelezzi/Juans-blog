@@ -30,7 +30,7 @@ export const Header = ({ className }: HeaderProps) => {
 
   return (
     <header className={`navbar mb-5 p-0 sm:mb-10 ${className && className}`}>
-      <div className="navbar-start ml-[-0.70rem]">
+      <div className="navbar-start ml-[-1rem]">
         {buttons.map((button) => (
           <div key={`${button.text}-${button.href}`}>
             <ButtonLink
