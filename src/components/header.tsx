@@ -20,36 +20,38 @@ const ButtonLink = ({ text, href, active = false }: ButtonProps) => (
   </Link>
 );
 
+const buttons = [
+  { text: "Home", href: "/", id: 1 },
+  { text: "Blog", href: "/posts", id: 2 },
+];
+
 export const Header = ({ className }: HeaderProps) => {
   const router = useRouter();
 
-  const buttons = [
-    { text: "Home", href: "/" },
-    { text: "Blog", href: "/posts" },
-  ];
-
   return (
     <header className={`navbar mb-5 p-0 sm:mb-10 ${className && className}`}>
-      <div className="navbar-start ml-[-1rem]">
-        {buttons.map((button) => (
-          <div key={`${button.text}-${button.href}`}>
-            <ButtonLink
-              text={button.text}
-              href={button.href}
-              active={router.pathname === button.href}
-            />
+      <div className="navbar-start">
+        <div className="ml-[-1rem] inline-flex">
+          {buttons.map((button) => (
+            <div key={button.id}>
+              <ButtonLink
+                text={button.text}
+                href={button.href}
+                active={router.pathname === button.href}
+              />
+            </div>
+          ))}
+          <div>
+            <a
+              href="https://github.com/juancortelezzi"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <button className="btn btn-ghost font-normal normal-case">
+                Github
+              </button>
+            </a>
           </div>
-        ))}
-        <div>
-          <a
-            href="https://github.com/juancortelezzi"
-            rel="noreferrer"
-            target="_blank"
-          >
-            <button className="btn btn-ghost font-normal normal-case">
-              Github
-            </button>
-          </a>
         </div>
       </div>
       <div className="navbar-end">
