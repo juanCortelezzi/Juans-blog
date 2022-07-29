@@ -15,9 +15,9 @@ const Home: NextPage = () => {
             Hey, I&apos;m <span className="text-primary">Juan Cortelezzi</span>
           </h1>
           <p>
-            I&apos;m a self taught web developer, currently studying software
-            engeneering at UADE University. You&apos;ve found my personal slice
-            of the internet, feel free to look around.
+            I&apos;m a self taught software developer, recently studying
+            software engineering. You&apos;ve found my personal slice of the
+            internet, feel free to look around.
           </p>
         </div>
         <div className="avatar order-first col-span-1 sm:order-last">
